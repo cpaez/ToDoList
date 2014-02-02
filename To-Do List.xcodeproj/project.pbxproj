@@ -172,9 +172,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8F62F9D318908C4D00CFAC9A /* ToDoList */ = {
+		8F62F9D318908C4D00CFAC9A /* To-Do List */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8F62FA0018908C4D00CFAC9A /* Build configuration list for PBXNativeTarget "ToDoList" */;
+			buildConfigurationList = 8F62FA0018908C4D00CFAC9A /* Build configuration list for PBXNativeTarget "To-Do List" */;
 			buildPhases = (
 				8F62F9D018908C4D00CFAC9A /* Sources */,
 				8F62F9D118908C4D00CFAC9A /* Frameworks */,
@@ -184,7 +184,7 @@
 			);
 			dependencies = (
 			);
-			name = ToDoList;
+			name = "To-Do List";
 			productName = ToDoList;
 			productReference = 8F62F9D418908C4D00CFAC9A /* ToDoList.app */;
 			productType = "com.apple.product-type.application";
@@ -225,7 +225,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8F62F9CF18908C4D00CFAC9A /* Build configuration list for PBXProject "ToDoList" */;
+			buildConfigurationList = 8F62F9CF18908C4D00CFAC9A /* Build configuration list for PBXProject "To-Do List" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -237,7 +237,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F62F9D318908C4D00CFAC9A /* ToDoList */,
+				8F62F9D318908C4D00CFAC9A /* To-Do List */,
 				8F62F9EE18908C4D00CFAC9A /* ToDoListTests */,
 			);
 		};
@@ -291,7 +291,7 @@
 /* Begin PBXTargetDependency section */
 		8F62F9F518908C4D00CFAC9A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8F62F9D318908C4D00CFAC9A /* ToDoList */;
+			target = 8F62F9D318908C4D00CFAC9A /* To-Do List */;
 			targetProxy = 8F62F9F418908C4D00CFAC9A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -467,7 +467,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F62F9CF18908C4D00CFAC9A /* Build configuration list for PBXProject "ToDoList" */ = {
+		8F62F9CF18908C4D00CFAC9A /* Build configuration list for PBXProject "To-Do List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F62F9FE18908C4D00CFAC9A /* Debug */,
@@ -476,7 +476,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8F62FA0018908C4D00CFAC9A /* Build configuration list for PBXNativeTarget "ToDoList" */ = {
+		8F62FA0018908C4D00CFAC9A /* Build configuration list for PBXNativeTarget "To-Do List" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8F62FA0118908C4D00CFAC9A /* Debug */,
