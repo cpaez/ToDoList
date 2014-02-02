@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PracticeAddToDoItemViewController prepareForSegue:sender:]:PracticeAddToDoItemViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.managedObjectContext">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PracticeAddToDoItemViewController managedObjectContext]:PracticeAddToDoItemViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PracticeToDoListViewController loadInitialData]:PracticeToDoListViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.managedObjectContext">
+            </PersistentString>
+            <PersistentString
+               value = "self">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PracticeAppDelegate application:didFinishLaunchingWithOptions:]:PracticeAppDelegate.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

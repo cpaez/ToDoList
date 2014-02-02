@@ -7,7 +7,7 @@
 //
 
 #import "PracticeToDoListViewController.h"
-#import "PracticeToDoItem.h"
+#import "TodoItem.h"
 #import "PracticeAddToDoItemViewController.h"
 
 @interface PracticeToDoListViewController ()
@@ -18,16 +18,30 @@
 
 @implementation PracticeToDoListViewController
 
+//@synthesize managedObjectContext;
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
 - (void)loadInitialData {
-    PracticeToDoItem *item1 = [[PracticeToDoItem alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"TodoItem" inManagedObjectContext:self.managedObjectContext];
+    
+    TodoItem *item1 = [[TodoItem alloc]initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
     item1.itemName = @"Buy milk";
     [self.todoItems addObject:item1];
     
-    PracticeToDoItem *item2 = [[PracticeToDoItem alloc] init];
+    TodoItem *item2 = [[TodoItem alloc]initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
     item2.itemName = @"Buy eggs";
     [self.todoItems addObject:item2];
     
-    PracticeToDoItem *item3 = [[PracticeToDoItem alloc] init];
+    TodoItem *item3 = [[TodoItem alloc]initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
     item3.itemName = @"Read a book";
     [self.todoItems addObject:item3];
 }
@@ -35,7 +49,7 @@
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
     PracticeAddToDoItemViewController *source = [segue sourceViewController];
-    PracticeToDoItem *item = source.todoItem;
+    TodoItem *item = source.todoItem;
     
     if (item != nil) {
         [self.todoItems addObject:item];
@@ -90,7 +104,7 @@
 {
     static NSString *CellIdentifier = @"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    PracticeToDoItem *toDoItem = [self.todoItems objectAtIndex:indexPath.row];
+    TodoItem *toDoItem = [self.todoItems objectAtIndex:indexPath.row];
     cell.textLabel.text = toDoItem.itemName;
     if (toDoItem.completed) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -156,7 +170,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    PracticeToDoItem *tappedItem = [self.todoItems objectAtIndex:indexPath.row];
+    TodoItem *tappedItem = [self.todoItems objectAtIndex:indexPath.row];
     tappedItem.completed = !tappedItem.completed;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
 }

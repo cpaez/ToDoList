@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PracticeToDoItem.h"
+#import "TodoItem.h"
 
 @interface PracticeAddToDoItemViewController : UIViewController
 
-@property PracticeToDoItem *todoItem;
+@property TodoItem *todoItem;
+@property (nonatomic,strong) NSManagedObjectContext *managedObjectContext;
 
 @end

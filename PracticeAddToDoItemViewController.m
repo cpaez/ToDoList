@@ -16,12 +16,27 @@
 
 @implementation PracticeAddToDoItemViewController
 
+//@synthesize managedObjectContext;
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if (sender != self.doneButton) return;
     
+    [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+    
     if (self.textField.text.length > 0) {
-        self.todoItem = [[PracticeToDoItem alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"TodoItem" inManagedObjectContext:self.managedObjectContext];
+        
+        self.todoItem = [[TodoItem alloc]initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
         self.todoItem.itemName = self.textField.text;
         self.todoItem.completed = NO;
     }
