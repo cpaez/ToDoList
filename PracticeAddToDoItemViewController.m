@@ -39,6 +39,12 @@
         self.todoItem = [[TodoItem alloc]initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
         self.todoItem.itemName = self.textField.text;
         self.todoItem.completed = NO;
+        
+        NSError *error = nil;
+        // Save the object to persistent store
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+        }
     }
 }
 

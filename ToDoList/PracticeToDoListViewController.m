@@ -29,21 +29,14 @@
     return context;
 }
 
-- (void)loadInitialData {
+- (void)reloadData {
     
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"TodoItem" inManagedObjectContext:self.managedObjectContext];
+    // Fetch the devices from persistent data store
+    NSManagedObjectContext *managedObjectContext = [self managedObjectContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"TodoItem"];
+    self.todoItems = [[managedObjectContext executeFetchRequest:fetchRequest error:nil] mutableCopy];
     
-    TodoItem *item1 = [[TodoItem alloc]initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    item1.itemName = @"Buy milk";
-    [self.todoItems addObject:item1];
-    
-    TodoItem *item2 = [[TodoItem alloc]initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    item2.itemName = @"Buy eggs";
-    [self.todoItems addObject:item2];
-    
-    TodoItem *item3 = [[TodoItem alloc]initWithEntity:entity insertIntoManagedObjectContext:self.managedObjectContext];
-    item3.itemName = @"Read a book";
-    [self.todoItems addObject:item3];
+    [self.tableView reloadData];
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
@@ -66,12 +59,19 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.todoItems = [[NSMutableArray alloc] init];
-    [self loadInitialData];
+    //self.todoItems = [[NSMutableArray alloc] init];
+    //[self loadInitialData];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -104,6 +104,7 @@
 {
     static NSString *CellIdentifier = @"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     TodoItem *toDoItem = [self.todoItems objectAtIndex:indexPath.row];
     cell.textLabel.text = toDoItem.itemName;
     if (toDoItem.completed) {
