@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8F62F9D318908C4D00CFAC9A"
-               BuildableName = "ToDoList.app"
+               BuildableName = "To-Do List.app"
                BlueprintName = "To-Do List"
                ReferencedContainer = "container:To-Do List.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F62F9D318908C4D00CFAC9A"
-            BuildableName = "ToDoList.app"
+            BuildableName = "To-Do List.app"
             BlueprintName = "To-Do List"
             ReferencedContainer = "container:To-Do List.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F62F9D318908C4D00CFAC9A"
-            BuildableName = "ToDoList.app"
+            BuildableName = "To-Do List.app"
             BlueprintName = "To-Do List"
             ReferencedContainer = "container:To-Do List.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F62F9D318908C4D00CFAC9A"
-            BuildableName = "ToDoList.app"
+            BuildableName = "To-Do List.app"
             BlueprintName = "To-Do List"
             ReferencedContainer = "container:To-Do List.xcodeproj">
          </BuildableReference>

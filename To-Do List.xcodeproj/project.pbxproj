@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8F62F9D418908C4D00CFAC9A /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F62F9D418908C4D00CFAC9A /* To-Do List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To-Do List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F62F9D718908C4D00CFAC9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8F62F9D918908C4D00CFAC9A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8F62F9DB18908C4D00CFAC9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -105,7 +105,7 @@
 		8F62F9D518908C4D00CFAC9A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8F62F9D418908C4D00CFAC9A /* ToDoList.app */,
+				8F62F9D418908C4D00CFAC9A /* To-Do List.app */,
 				8F62F9EF18908C4D00CFAC9A /* ToDoListTests.xctest */,
 			);
 			name = Products;
@@ -186,7 +186,7 @@
 			);
 			name = "To-Do List";
 			productName = ToDoList;
-			productReference = 8F62F9D418908C4D00CFAC9A /* ToDoList.app */;
+			productReference = 8F62F9D418908C4D00CFAC9A /* To-Do List.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8F62F9EE18908C4D00CFAC9A /* ToDoListTests */ = {
