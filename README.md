@@ -11,9 +11,9 @@ App created for educational purposes. Features will be added as I gain new knowl
 - [done] Add icon
 - [done] Add Core Data support, to-do list are locally saved (sqlite)
 - [done] Create dummy REST Service (.NET)
+- [done] Add persistence to REST Service
 - Create new icon
 - Add persistence for 'mark as done´functionality
-- Add persistence to REST Service
 - Implement Syncing capabilities
 - Add iCloud support
 - Add accelerometer support (shake to create new task)
